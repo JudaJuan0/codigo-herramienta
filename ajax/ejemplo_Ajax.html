@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+	<script>
+		function cargarajax(){
+			var url="ejemplo1.html"
+
+			$.ajax({
+			type:"POST",
+			url:url,
+			data:{},
+			success:function(request){
+				$(".ajax1").html(request);
+			}
+		});
+		}
+		 function cargar_1(){            
+            var url="1.html"
+            $.ajax({   
+                type: "POST",
+                url:url,
+                data:{},
+                success: function(request){       
+                    $('.ajax1').html(request);
+                }
+            });
+        }
+		
+	</script>
+</head>
+<body>
+
+	
+	
+	<button onclick="cargar_1();" >Hola</button>
+	<p onclick="cargar_1();" >cargar ajax 2</p>
+
+
+	
+	<div class="ajax1"></div>
+
+	
+
+
+
+</body>
+</html>

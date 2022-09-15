@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <title>Ejemplo de ajax</title>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+
+     <script> 
+        function cargar(){
+           
+            var url="ejemplo.html"
+            $.ajax({   
+                type: "POST",       
+                url:url,    
+                data:{},
+                success: function(datos){       
+                    $('.prueba').html(datos);
+                }
+            });
+        }
+         function cargar_1(){
+            
+            var url="ejemplo1.html"
+            $.ajax({   
+                type: "POST",
+                url:url,
+                data:{},
+                success: function(date){       
+                    $('.prueba').html(date);
+                }
+            });
+        }
+     </script>
+    
+</head>
+<body>
+
+   <div>
+   <p onclick="cargar();" id="myBtn">cargar ajax 1</p>
+   <p onclick="cargar_1();" id="myBtn1">cargar ajax 2</p>
+   
+ 
+   </div>
+   <div class="prueba">
+
+   </div>
+   <div class="pona">
+
+   </div>
+</body>
+</html>
